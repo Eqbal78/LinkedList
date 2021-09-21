@@ -13,16 +13,8 @@ namespace LinkedListPractice
             element.Add(56);
             element.Add(30);
             element.Add(70);
-            element.RemoveFirst();
+            element.RemoveLast();
             element.Display();
-
-            //Insert the element between two node
-
-            /* Console.WriteLine("The list before inserting 30 is : ");
-             element.Display();
-             element.InsertAtParticularPosition(2, 30);
-             Console.WriteLine("The list after inserting 30 is : ");
-             element.Display();*/
 
         }
     }

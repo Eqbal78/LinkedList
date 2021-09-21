@@ -118,6 +118,32 @@ namespace LinkedListPractice
             this.head = this.head.next;
             return this.head;
         }
+
+        /// <summary>
+        /// Remove last Node in Linkedlist
+        /// </summary>
+        /// <returns></returns>
+        public Node<Gtype> RemoveLast()
+        {
+            if (head == null)
+            {
+                return null;
+            }
+            if (head.next == null)
+            {
+                return head;
+            }
+            // traverse till the last node //
+            Node<Gtype> NewNode = head;
+            while (NewNode.next.next != null)
+            {
+                NewNode = NewNode.next;
+            }
+            NewNode.next = null;
+            return head;
+
+        }
+
         /// <summary>
         /// Display the LinkedList
         /// </summary>
