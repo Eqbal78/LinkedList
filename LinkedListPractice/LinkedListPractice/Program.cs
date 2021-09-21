@@ -10,9 +10,12 @@ namespace LinkedListPractice
             
             LinkedList<int> obj = new LinkedList<int>();//Create object
             //Add Element
-            obj.Add(56);
-            obj.Add(30);
-            obj.Add(70);
+            //obj.Add(56);
+           // obj.Add(30);
+           // obj.Add(70);
+            obj.append(56);
+            obj.append(30);
+            obj.append(70);
             obj.Display();
         }
     }
