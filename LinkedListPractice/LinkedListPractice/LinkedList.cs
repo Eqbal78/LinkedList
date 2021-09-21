@@ -71,6 +71,29 @@ namespace LinkedListPractice
             return;
         }
 
+        public void InsertAtParticularPosition(int position, Gtype data)
+        {
+            Node<Gtype> node = new Node<Gtype>(data);
+            if (position < 1)
+                Console.WriteLine("Invalid Position");
+            else if (position == 1)
+            {
+                node.next = head;
+                head = node;
+            }
+            else
+            {
+                Node<Gtype> temp = head;
+
+                while (position > 2)
+                {
+                    temp = temp.next;
+                    position--;
+                }
+                node.next = temp.next;
+                temp.next = node;
+            }
+        }
         /// <summary>
         /// Display the LinkedList
         /// </summary>
