@@ -71,11 +71,21 @@ namespace LinkedListPractice
             return;
         }
 
+        /// <summary>
+        /// Insert the element in middle
+        /// </summary>
+        /// <param name="position"></param>
+        /// <param name="data"></param>
         public void InsertAtParticularPosition(int position, Gtype data)
         {
+            // Allocate the Node & Put in the data//
             Node<Gtype> node = new Node<Gtype>(data);
+
+            //Check the position
             if (position < 1)
+            {
                 Console.WriteLine("Invalid Position");
+            }
             else if (position == 1)
             {
                 node.next = head;
@@ -93,6 +103,20 @@ namespace LinkedListPractice
                 node.next = temp.next;
                 temp.next = node;
             }
+        }
+
+        /// <summary>
+        /// Delete the first node in LinkList
+        /// </summary>
+        /// <returns></returns>
+        public Node<Gtype> RemoveFirst()
+        {
+            if (this.head == null)
+            {
+                return null;
+            }
+            this.head = this.head.next;
+            return this.head;
         }
         /// <summary>
         /// Display the LinkedList
@@ -113,9 +137,7 @@ namespace LinkedListPractice
                 temp = temp.next;
 
             }
-        }
-
-       
+        }  
 
     }
 }
