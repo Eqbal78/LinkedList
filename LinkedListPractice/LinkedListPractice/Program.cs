@@ -7,7 +7,9 @@ namespace LinkedListPractice
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Linked List Problem");
-            LinkedList<int> obj = new LinkedList<int>();
+            
+            LinkedList<int> obj = new LinkedList<int>();//Create object
+            //Add Element
             obj.Add(56);
             obj.Add(30);
             obj.Add(70);
