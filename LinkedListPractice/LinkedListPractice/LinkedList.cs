@@ -40,6 +40,26 @@ namespace LinkedListPractice
             
             Console.WriteLine("{0} insert into linked list ", node.data);
         }
+        /// <summary>
+        /// Display the LinkedList
+        /// </summary>
+        public void Display()
+        {
+            //Create temp Node and Intialised as head
+            Node<Gtype> temp = this.head;
+            if (temp == null)
+            {
+                Console.WriteLine("the linked list is empty");
+                return;
+            }
+            //add node one by one
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data + " ");
+                temp = temp.next;
+
+            }
+        }
 
     }
 }

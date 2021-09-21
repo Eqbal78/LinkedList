@@ -13,6 +13,7 @@ namespace LinkedListPractice
             obj.Add(56);
             obj.Add(30);
             obj.Add(70);
+            obj.Display();
         }
     }
 }
