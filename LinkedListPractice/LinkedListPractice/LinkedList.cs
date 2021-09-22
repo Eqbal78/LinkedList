@@ -144,10 +144,17 @@ namespace LinkedListPractice
 
         }
 
+        /// <summary>
+        /// Searching the Element in Node
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public Node<Gtype> Search(int value)
         {
+            //traverse till the last node //
             while (this.head != null)
             {
+                //Check Data is equal to value
                 if (this.head.data.Equals(value))
                 {
                     return this.head;

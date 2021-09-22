@@ -11,7 +11,7 @@ namespace LinkedListPractice
             while (true)
             {
                 Console.WriteLine("\nEnter an option:");
-                Console.WriteLine("1.Add New Element \n2.Append New Element \n3.Insert New Element \n4.Remove First Element \n5.Remove Last Element \n6.Search Element \n7.Exit");
+                Console.WriteLine("1.Add New Element \n2.Append New Element \n3.Insert New In Middle Element \n4.Remove First Element \n5.Remove Last Element \n6.Search Element \n7.Insert Element At Particular Position \n8.Exit");
 
                 int choice = Convert.ToInt32(Console.ReadLine());
                 // choose the options from user
@@ -37,6 +37,9 @@ namespace LinkedListPractice
                         Operation.SearchElement();
                         break;
                     case 7:
+                        Operation.InsertAtPositionElement();
+                        break;
+                    case 8:
                         Environment.Exit(0);
                         break;
 
