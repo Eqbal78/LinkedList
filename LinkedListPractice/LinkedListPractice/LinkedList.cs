@@ -144,6 +144,21 @@ namespace LinkedListPractice
 
         }
 
+        public Node<Gtype> Search(int value)
+        {
+            while (this.head != null)
+            {
+                if (this.head.data.Equals(value))
+                {
+                    return this.head;
+                }
+                this.head = this.head.next;
+            }
+            return null;
+        }
+
+
+
         /// <summary>
         /// Display the LinkedList
         /// </summary>

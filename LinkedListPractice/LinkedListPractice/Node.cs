@@ -24,6 +24,7 @@ namespace LinkedListPractice
         public Node(Gtype value)
         {
             this.data = value;
+            
         }
     }
 }
