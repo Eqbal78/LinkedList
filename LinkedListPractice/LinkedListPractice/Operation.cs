@@ -111,5 +111,28 @@ namespace LinkedListPractice
             element.Display();
         }
 
+        /// <summary>
+        /// Create Static Method to Delete Element in Any Position
+        /// </summary>
+        public static void DeleteAtPositionElement()
+        {
+            LinkedList<int> element = new LinkedList<int>();//Create object
+            element.Add(56);
+            element.Add(30);
+            element.Add(40);
+            element.Add(70);
+
+            Console.WriteLine("The list before Deleting 40 is : ");
+            element.Display();
+            element.Delete(40);
+            Console.WriteLine("The list after Deleting 40 is : ");
+            element.Display();
+
+            Console.WriteLine("After Deleting Size of linked List is:");
+            Console.WriteLine(element.Size()); 
+            
+
+        }
+
     }
 }

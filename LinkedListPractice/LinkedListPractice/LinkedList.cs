@@ -171,7 +171,7 @@ namespace LinkedListPractice
         /// </summary>
         public void Display()
         {
-            //Create temp Node and Intialised as head
+            //Create temp Node and Intialised as head//
             Node<Gtype> temp = this.head;
             if (temp == null)
             {
@@ -185,7 +185,48 @@ namespace LinkedListPractice
                 temp = temp.next;
 
             }
-        }  
+        }
+
+        /// <summary>
+        /// Deleting the Node at any position
+        /// </summary>
+        /// <param name="data"></param>
+        public void Delete(int data)
+        {
+            //Create temp Node and Intialised as head//
+            Node<Gtype> temp = head, previous = null;
+            if (temp != null && temp.data.Equals(data))
+            {
+                head = temp.next;
+                return;
+            }
+            // traverse till the last node and also check temperory data to data //
+            while (temp != null && !temp.data.Equals(data))
+            {
+                previous = temp;
+                temp = temp.next;
+            }
+            if (temp == null)
+                return;
+            previous.next = temp.next;
+        }
+
+        /// <summary>
+        /// After Deleting Calculate the size
+        /// </summary>
+        /// <returns></returns>
+        public int Size()
+        {
+            int size = 0;
+            Node<Gtype> temp = head;
+            // traverse till the last node //
+            while (temp != null)
+            {
+                size++;
+                temp = temp.next;
+            }
+            return size;
+        }
 
     }
 }
