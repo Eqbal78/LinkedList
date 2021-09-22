@@ -134,5 +134,24 @@ namespace LinkedListPractice
 
         }
 
+        public static void SortedElement()
+        {
+            ShortedLinkedList<int> element = new ShortedLinkedList<int>();
+            LinkedList<int> element1 = new LinkedList<int>();//Create object
+            Console.WriteLine("The list before Shorting is : \n");
+            element1.Add(56);
+            element1.Add(30);
+            element1.Add(40);
+            element1.Add(70);
+            
+            Console.WriteLine("\nThe list after Shorting is : ");
+            element.Add(56);
+            element.Add(30);
+            element.Add(40);
+            element.Add(70);
+            element.DisplaySort();
+            
+        }
+
     }
 }
